@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" type="text/css" href="css/contact.css" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dompurify@2.3.0/dist/purify.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WGX24MXLHG');
+  </script>
+  <style></style>
+</head>
+
+<body>
+  <header>
+    <a href="home.html"><img src="images/name-logo.png" alt="Eric Dong" class="me" /></a>
+    <div id="navbar" class="out">
+      <nav>
+        <!--<a href="experiment.html"> Experiments </a>-->
+        <a href="home.html#About">About</a>
+        <a href="home.html#Work">Work</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h1>Get in Touch!</h1>
+      <div class="in-touch">
+        <p>
+          You can find me on LinkedIn, Github, or just email me with any
+          inquiries.
+        </p>
+        <div class="media">
+          <!--Image taken from https://www.pngarts.com/ -->
+          <a href="https://www.linkedin.com/in/eric-dong-374871244/" class="smedia"><img src="images/linkedin.png"
+              alt="Linkedin Link" /></a>
+          <!--Image taken from https://www.flaticon.com/ -->
+          <a href="https://github.com/e81786" class="smedia"><img src="images/github.png" alt="Github Link" /></a>
+          <!--Image taken from https://icon-library.com/ -->
+          <a href="mailto:e1dong@ucsd.edu" class="smedia" target="_blank" rel="noopener noreferrer"><img
+              src="images/mail.png" alt="E-Mail" /></a>
+        </div>
+      </div>
+      <div class="mail">
+        <p>You can also contact me through this form!</p>
+        <form action="mailto:e1dong@ucsd.edu" method="get" class="contact-form">
+          <div class="row">
+            <div class="col-1">
+              <label for="name">Enter your name:</label>
+            </div>
+            <div class="col-2">
+              <input type="text" name="name" id="name" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <label for="email">Enter your email:</label>
+            </div>
+            <div class="col-2">
+              <input type="email" name="email" id="email" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <label for="message">Enter your message: </label>
+            </div>
+            <div class="col-2">
+              <textarea id="message" rows="5" cols="33">Enter your message here...</textarea>
+            </div>
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+    <br />
+    <section id="resume">
+      <h2>Resume:</h2>
+      <div class="resume-file">
+        <iframe src="files/Resume.pdf" class="doc"></iframe>
+        <!--Image taken from https://www.flaticon.com/ -->
+        <a href="files/Resume.pdf" class="down" download="Eric-Dong-Resume.pdf"><img src="images/document.png"
+            alt="Download Document Here" class="rep">Resume Link</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <hr />
+    <div>
+      <p class="dots">
+        <span class="dots1">&#x2B2D</span> <span class="dots2">&#x2B2D</span> <span class="dots3">&#x2B2D</span> <span
+          class="dots4">&#x2B2D</span> <span class="dots5">&#x2B2D</span>
+        <span class="dots6">&#x2B2D</span> <span class="dots7">&#x2B2D</span>
+      </p>
+      <p>Eric Dong</p>
+    </div>
+  </footer>
+</body>
+
+</html>

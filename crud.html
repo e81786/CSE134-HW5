@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Crud</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dompurify@2.3.0/dist/purify.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGX24MXLHG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WGX24MXLHG');
+    </script>
+    <script type="module">
+        import { blog } from "/js/blog.js";
+        window.onload = blog;
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>My Blogs</h1>
+
+        <ul id="listBlog"></ul>
+
+        <button class="addBlog">Add Blog</button>
+
+        <dialog id="blogDialog">
+            Add a new Blog!
+            <br>
+            <label for="title">Blog Title:</label>
+            <input type="text" id="title" name="title">
+            <label for="date">Date (Month Day, Year):</label>
+            <input type="date" id="date" name="date" value="2023-02-28" min="2016-09-01" max="2023-3-30">
+            <br>
+            <br>
+            <label for="sum">Quick Summary of Post (1-2 sentences):</label>
+            <textarea id="summary" name="sum" rows="2" cols="26"></textarea>
+            <br>
+            <button id="Cancel">Cancel</button>
+            <button id="Done">Submit</button>
+        </dialog>
+        <dialog id="editDialog">
+            Edit your blog!
+            <br>
+            <label for="title">Blog Title:</label>
+            <input type="text" id="etitle" name="title">
+            <label for="date">Date (Month Day, Year):</label>
+            <input type="date" id="edate" name="date" value="2023-02-28" min="2016-09-01" max="2023-3-30">
+            <br>
+            <br>
+            <label for="sum">Quick Summary of Post (1-2 sentences):</label>
+            <textarea id="esummary" name="sum" rows="2" cols="26"></textarea>
+            <br>
+            <button id="editCancel">Cancel</button>
+            <button id="editDone">Submit</button>
+        </dialog>
+        <dialog id="deleteDialog">
+            Delete?
+            <br>
+            <button id="noDelete">Cancel</button>
+            <button id="Delete">Confirm</button>
+        </dialog>
+    </main>
+</body>

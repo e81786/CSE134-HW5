@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f0e9;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 5%;
+  margin-left: 7%;
+}
+
+button {
+  cursor: pointer;
+}
+
+#listBlog button {
+  background-color: #f5f0e9;
+  border: none;
+  margin-left: 3px;
+  position: relative;
+}
+
+#listBlog button span {
+  width: 60%;
+  height: 20px;
+}
+
+#listBlog p {
+  margin: 12px;
+}
+
+#listBlog {
+  margin-left: 10%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+}
+
+#listBlog li::marker {
+  content: "\e3c6";
+}
+
+.addBlog {
+  margin-left: 70%;
+  background-color: #cfc7ba;
+  border: none;
+  width: 7em;
+  height: 35px;
+  font-size: 20px;
+}
+
+input {
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+dialog button {
+  background-color: #cfc7ba;
+  width: 5em;
+  height: 25px;
+  font-size: 18px;
+  border: none;
+  margin: 5px;
+}
+
+#Cancel,
+#editCancel {
+  margin-top: 20px;
+  margin-left: 40%;
+}
+
+#deleteDialog {
+  font-size: 18px;
+}
+
+#deleteDialog button {
+  margin-top: 20px;
+}

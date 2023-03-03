@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f0e9;
+  font-size: 16px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 834px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  background-color: #bdb09e;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header a[href$="home.html"] img {
+  height: auto;
+  width: 50%;
+}
+
+#navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding-right: 25px;
+  display: inline-block;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.me {
+  transition: all 1s ease;
+}
+
+.me:hover {
+  transform: scale(1.1);
+}
+
+#navbar a[href$="home.html#Work"] {
+  padding-right: 17px;
+}
+
+#navbar a[href$="contact.html"] {
+  padding: 6px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+
+#navbar a:hover {
+  font-weight: bolder;
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+@media only screen and (min-width: 1440px) {
+  #navbar a {
+    font-size: 1.4vw;
+  }
+
+  header a[href$="home.html"] img {
+    height: auto;
+    width: 100%;
+    padding-top: 4%;
+    padding-right: 3%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 834px) {
+  #navbar a {
+    font-size: 2.4vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    position: relative;
+    padding: 10px;
+    justify-content: stretch;
+  }
+  header a[href$="home.html"] {
+    padding: 0;
+    width: 50%;
+  }
+  header a[href$="home.html"] img {
+    display: inline-block;
+    margin-right: 0;
+  }
+  #navbar a {
+    font-size: 2.8vw;
+    padding-right: 10px;
+  }
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  padding: 2%;
+  padding-top: 3%;
+  padding-left: 18%;
+  margin: 0;
+  font-size: 2em;
+}
+
+.in-touch {
+  padding-left: 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+}
+
+.smedia {
+  width: 6%;
+  margin-right: 5%;
+  /*
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 20%;
+  height: 69px;
+  */
+}
+
+.smedia img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 3vw;
+    padding-bottom: 1%;
+  }
+  .in-touch {
+    font-size: 1.6vw;
+  }
+
+  .smedia {
+    width: 7%;
+    padding-left: 5%;
+    padding-bottom: 1%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 834px) {
+  h1 {
+    padding-left: 10%;
+    font-size: 4vw;
+  }
+
+  .in-touch {
+    padding-left: 10%;
+    font-size: 2.3vw;
+    width: 90%;
+  }
+
+  .smedia {
+    padding-left: 10%;
+    width: 10%;
+    padding-top: 3px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    padding-left: 5%;
+  }
+
+  .in-touch {
+    padding-left: 5%;
+    width: 80%;
+  }
+
+  .smedia {
+    padding-left: 15%;
+    width: 15%;
+    margin-right: 3.3%;
+  }
+}
+
+.mail {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-left: 18%;
+  border-radius: 5px;
+}
+
+.contact-form {
+  width: 75%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 70%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 2ch;
+}
+
+label[for="name"],
+label[for="email"] {
+  padding-right: 5ch;
+}
+
+input[type="submit"] {
+  background-color: #51826c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  height: 4vw;
+}
+
+input[type="submit"]:hover {
+  background-color: #46705d;
+}
+
+.col-1 {
+  float: left;
+  margin-top: 6px;
+}
+
+.col-2 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .mail {
+    font-size: 1.6vw;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    font-size: 1.6vw;
+  }
+
+  .col-1,
+  .col-2 {
+    padding-bottom: 1%;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  input[type="submit"] {
+    width: 30%;
+    margin-top: 1%;
+    float: left;
+    height: 3.2vw;
+    font-size: 1.6vw;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 834px) {
+  .mail {
+    margin-left: 10%;
+    font-size: 2.3vw;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 30%;
+    margin-top: 1%;
+    float: left;
+    height: 5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mail {
+    margin-left: 5%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 40%;
+    margin-top: 1%;
+    float: left;
+    height: 7vw;
+  }
+}
+
+#resume {
+  height: 100%;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  padding: 2%;
+  padding-top: 3%;
+  padding-left: 18%;
+  margin: 0;
+  font-size: 2em;
+}
+
+.resume-file {
+  text-align: center;
+  border-style: none;
+  height: 100%;
+  width: 100%;
+}
+
+.doc {
+  width: 65%;
+  height: 1150px;
+  position: relative;
+}
+
+.down {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .doc {
+    width: 65%;
+    height: 1600px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .doc {
+    width: 65%;
+    height: 800px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .doc {
+    width: 80%;
+    height: 800px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .doc {
+    width: 80%;
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #resume {
+    margin-bottom: 2%;
+  }
+
+  h2 {
+    padding-left: 5%;
+  }
+
+  .doc {
+    display: none;
+  }
+
+  .down {
+    display: block;
+    color: black;
+    text-decoration: none;
+  }
+
+  .rep {
+    width: 4%;
+  }
+}
+
+footer {
+  padding-top: 2%;
+}
+
+footer hr {
+  width: 85%;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2px;
+  padding-bottom: 2%;
+  cursor: default;
+}
+
+.dots {
+  color: #51826c;
+  font-size: 1.5em;
+}
+
+.dots1,
+.dots2,
+.dots3,
+.dots4,
+.dots5,
+.dots6,
+.dots7 {
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease-in-out;
+  transition: color 100ms ease-in;
+}
+
+.dots1:hover,
+.dots2:hover,
+.dots3:hover,
+.dots4:hover,
+.dots5:hover,
+.dots6:hover,
+.dots7:hover {
+  transform: translateY(-150%);
+}
+
+.dots1:hover {
+  color: #6d9f88;
+}
+
+.dots2:hover {
+  color: #40776d;
+}
+
+.dots3:hover {
+  color: #346c6c;
+}
+
+.dots4:hover {
+  color: #2f6068;
+}
+
+.dots5:hover {
+  color: #1f503c;
+}
+
+.dots6:hover {
+  color: #2e5461;
+}
+
+.dots7:hover {
+  color: #2f4858;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 834px) {
+  footer {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 3vw;
+  }
+}

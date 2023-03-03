@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Native Dialogs</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dompurify@2.3.0/dist/purify.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGX24MXLHG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WGX24MXLHG');
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>Simple Dialogs</h1>
+
+        <button class="alert">Alert</button>
+        <button class="confirm">Confirm</button>
+        <button class="prompt">Prompt</button>
+        <button class="sprompt">Safer Prompt</button>
+
+        <hr>
+        <output id="output"></output>
+    </main>
+    <script>
+
+        //output variable
+        const output = document.getElementById('output');
+
+        //Clear output before a button is pressed
+        for (let i = 0; i < 4; i++) {
+            document.getElementsByTagName("button")[i].addEventListener("click", () => {
+                output.innerHTML = "";
+            });
+        }
+
+        //Event listeners for the buttons
+
+        //Alert button
+        document.getElementsByClassName("alert")[0].addEventListener("click", () => {
+            setTimeout(() => {
+                alert("This is a built in Alert!");
+            }
+                , 25);
+        });
+
+        //Confirm Button
+        document.getElementsByClassName("confirm")[0].addEventListener("click", () => {
+            setTimeout(() => {
+                text = confirm("Are you sure?");
+                output.innerHTML = `Confirmed? ${text}`
+            }
+                , 25);
+        });
+
+        //Unsafe Prompt Button
+        document.getElementsByClassName("prompt")[0].addEventListener("click", () => {
+            setTimeout(() => {
+                text = prompt("What is your name", "Your Name Here")
+                output.innerHTML = text ? `Hi ${text}!` : `User didn't enter anything`;
+            }
+                , 25);
+        });
+
+        //Safe Prompt Button
+        document.getElementsByClassName("sprompt")[0].addEventListener("click", () => {
+            setTimeout(() => {
+                text = prompt("What is your name", "Your Name Here");
+                output.innerHTML = text ? tagPurify`Nice to meet you, ${text}!` : `User didn't enter anything`;
+
+            }
+                , 25);
+        });
+
+        //The tagged on Purify Function
+        function tagPurify(strings, ...values) {
+            const dirty = strings.reduce((prev, next, i) => `${prev}${next}${values[i] || ''}`, '');
+            return DOMPurify.sanitize(dirty);
+        }
+
+    </script>
+</body>
