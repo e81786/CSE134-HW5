@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Method Testing</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/js/methodtest.js"></script>
+    <style>
+        main {
+            margin: 4%;
+            margin-top: 3%;
+        }
+
+        h1 {
+            margin: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="home.html">return home</a>
+        <nav>
+            <a href="webcomponent.html">Webcomponent</a>
+            <a href="methodtest.html">Methodtesting</a>
+            <a href="home.html#About">About</a>
+            <a href="home.html#Work">Work</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Method Testing</h1>
+
+        <form id="http">
+
+            <label for="id">Record ID:</label>
+            <br />
+            <input type="number" id="id" name="id" value=0>
+            <br />
+            <label for="article_name">Article Name:</label>
+            <br />
+            <input type="text" id="article_name" name="article_name" value="Article Name Here">
+            <br />
+            <label for="article_body">Article Body:</label>
+            <br />
+            <textarea id="article_body" name="article_body">Article Body Here...</textarea>
+            <br />
+            <input type="date" id="date" name="date" readonly></input>
+        </form>
+
+        <br />
+        <br />
+
+        <button id="post" type="button" form="http" value="postBtn">postBtn</button>
+        <button id="get" type="button" form="http" value="getBtn">getBtn</button>
+        <button id="put" type="button" form="http" value="putBtn">putBtn</button>
+        <button id="delete" type="button" form="http" value="deleteBtn">deleteBtn</button>
+        <br />
+        <br />
+        <hr />
+
+        <output id="response"></output>
+    </main>
+
+    <script>
+        const date = document.getElementById("date");
+        date.valueAsDate = new Date();
+    </script>
+</body>
+
+</html>

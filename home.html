@@ -6,6 +6,7 @@
   <title>Eric Dong</title>
   <link rel="canonical" href="https://eric-dong-hw4.netlify.app/" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
   <meta name="robots" content="nofollow" />
   <meta name="author" content="Eric Dong" />
   <meta name="description" content="Eric Dong's Personal Portfolio" />
@@ -34,6 +35,8 @@
         <!--<a href="experiment.html"> Experiments </a>-->
         <!--<a href="home.html#About" id="abt">About</a>-->
         <!--<a href="home.html#Work" id="wrk">Work</a>-->
+        <a href="webcomponent.html">Webcomponent</a>
+        <a href="methodtest.html">Methodtesting</a>
         <a id="abt">About</a>
         <a id="wrk">Work</a>
         <a href="contact.html">Contact</a>
@@ -96,8 +99,8 @@
           <span class="rightarrow"></span>Skills
         </button>
         <div class="panel">
-          <p>Hard Skills</p>
-          <ul>
+          <p class="skills">Hard Skills</p>
+          <ul class="info">
             <li>Object Oriented Programming
               <p>
                 I have learned a variety of languages such as Java, Python, and C++, and I've taken classes and done
@@ -126,8 +129,8 @@
               </p>
             </li>
           </ul>
-          <p>Soft Skills</p>
-          <ul>
+          <p class="skills">Soft Skills</p>
+          <ul class="info">
             <li>Conflict Resolution
               <p>
                 Working as a referee and a lifeguard taught me a lot about dealing with angry or even just upset adults
@@ -155,7 +158,7 @@
           <span class="rightarrow"></span>Hobbies
         </button>
         <div class="panel">
-          <ul>
+          <ul class="info">
             <li>Sports
               <p>
                 I've been a swimmer as long as I can remember, starting from my mom throwing me in the pool from a
@@ -215,20 +218,60 @@
     <section id="Work" class="jumptarget">
       <h3 class="title">Work</h3>
       <div id="Constructing">
-        <div class="experience">
-          <picture>
-            <img src="images/tuned.jpeg" alt="Coming Soon" class="suspense" />
-          </picture>
-          <p>Check out some of my work!</p>
-          <h4>Experience</h4>
+        <div class="slideshow slidel">
+          <div class="experience fade">
+            <picture>
+              <!--Picture obtained from https://www.iconfinder.com/ -->
+              <img src="images/buisnesscheck.png" alt="Coming Soon" class="suspense" />
+            </picture>
+            <p>Check out some of my work!</p>
+            <h4>Experience</h4>
+          </div>
+          <div class="experience fade">
+            <picture>
+              <!--Picture obtained from https://stock.adobe.com -->
+              <img src="images/tuned.jpeg" alt="Coming Soon" class="suspense" />
+            </picture>
+            <p>jobs are difficult to find</p>
+            <h4>Experience</h4>
+          </div>
+          <div class="experience fade">
+            <picture>
+              <img src="images/tuned.jpeg" alt="Coming Soon" class="suspense" />
+            </picture>
+            <p>But I will have more</p>
+            <h4>Experience</h4>
+          </div>
+          <a class="prev">❮</a>
+          <a class="next">❯</a>
         </div>
-        <div class="project">
-          <picture>
-            <!--Picture obtained from https://stock.adobe.com -->
-            <img src="images/tuned.jpeg" alt="Coming Soon" class="suspense" />
-          </picture>
-          <p>Some cool things I did</p>
-          <h5>Projects</h5>
+        <div class="slideshow">
+          <div class="project fade">
+            <picture>
+              <!--Picture obtained from https://www.iconfinder.com/ -->
+              <img src="images/funcheck.png" alt="Coming Soon" class="suspense" />
+            </picture>
+            <p>Some cool things I did</p>
+            <h5>Projects</h5>
+          </div>
+          <div class="project fade">
+            <picture>
+              <!--Picture obtained from https://stock.adobe.com -->
+              <img src="images/tuned.jpeg" alt="Coming Soon" class="suspense" />
+            </picture>
+            <p>Coming Soon</p>
+            <h5>Projects</h5>
+          </div>
+          <div class="project fade">
+            <picture>
+              <!--Picture obtained from https://stock.adobe.com -->
+              <img src="images/tuned.jpeg" alt="Coming Soon" class="suspense" />
+            </picture>
+            <p>Very Soon</p>
+            <h5>Projects</h5>
+          </div>
+          <a class="prev">❮</a>
+          <a class="next">❯</a>
         </div>
       </div>
     </section>
@@ -241,7 +284,7 @@
           class="dots4">&#x2B2D</span> <span class="dots5">&#x2B2D</span>
         <span class="dots6">&#x2B2D</span> <span class="dots7">&#x2B2D</span>
       </p>
-      <p>Eric Dong</p>
+      <p id="totop">Eric Dong</p>
     </div>
   </footer>
 </body>

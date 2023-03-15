@@ -1,6 +1,7 @@
 export function main() {
   jumps();
   accordian();
+  nextSlide();
 }
 
 function jumps() {
@@ -11,6 +12,7 @@ function jumps() {
   const top = document.getElementById("top");
   const About = document.getElementById("About");
   const Work = document.getElementById("Work");
+  const totop = document.getElementById("totop");
 
   abt.addEventListener("click", () => {
     About.scrollIntoView();
@@ -21,6 +23,11 @@ function jumps() {
   });
 
   top.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+
+  totop.addEventListener("click", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
@@ -41,4 +48,42 @@ function accordian() {
       }
     });
   }
+}
+
+let slideIndex = [1, 1];
+let slideId = ["experience", "project"];
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides((slideIndex[no] += n), no);
+}
+
+function nextSlide() {
+  const prev = document.getElementsByClassName("prev");
+  const next = document.getElementsByClassName("next");
+
+  for (let i = 0; i < 2; i++) {
+    prev[i].addEventListener("click", () => {
+      plusSlides(-1, i);
+    });
+    next[i].addEventListener("click", () => {
+      plusSlides(1, i);
+    });
+  }
+}
+
+function showSlides(n, no) {
+  let i;
+  const x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {
+    slideIndex[no] = 1;
+  }
+  if (n < 1) {
+    slideIndex[no] = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex[no] - 1].style.display = "block";
 }

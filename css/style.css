@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|");
 
 html {
   scroll-behavior: smooth;
@@ -528,11 +529,30 @@ button {
 }
 
 .panel {
-  padding: 0 2%;
+  padding: 0 6%;
   background-color: #e6dac8;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+}
+
+.panel li::marker {
+  content: ">>";
+  font-size: 1.1em;
+}
+
+.panel li {
+  padding-left: 1%;
+}
+
+.skills {
+  font-weight: bolder;
+  font-size: 1.1em;
+  text-shadow: 0px 1px 1px #888888;
+}
+
+.info p {
+  margin-left: 2%;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -652,35 +672,70 @@ h3 {
   justify-content: center;
 }
 
+.slideshow {
+  margin-top: 5%;
+  width: 35%;
+}
+
 .experience,
 .project {
-  margin-top: 5%;
-  padding: 3%;
+  display: none;
   border-style: solid;
   border-width: 2px;
   border-color: gray;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  /*
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-    */
-  width: 35%;
   text-align: center;
   transition: all 0.4s ease-in-out;
+  padding: 3%;
+  width: 100%;
+  margin-bottom: 2%;
 }
 
-.experience {
+.slidel {
   margin-right: 5%;
 }
 
 .experience:hover,
 .project:hover {
-  border-radius: 10%;
+  border-radius: 6%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: relative;
+  top: -50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.5s ease;
+  border-radius: 20% 0 0 20%;
+  user-select: none;
+}
+
+.prev {
+  right: -2%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -87%;
+  border-radius: 0 20% 20% 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #bdb09e;
 }
 
 h4,
 h5 {
+  margin: 1.5em;
   line-height: 4%;
   font-size: 1.7em;
 }
@@ -688,6 +743,20 @@ h5 {
 .suspense {
   width: 60%;
   height: auto;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -715,6 +784,14 @@ h5 {
     font-size: 4vw;
   }
 
+  .prev {
+    right: -2%;
+  }
+
+  .next {
+    right: -74%;
+  }
+
   .suspense {
     width: 70%;
   }
@@ -731,10 +808,21 @@ h5 {
     margin-right: 0;
   }
 
-  .experience,
-  .project {
+  .slideshow {
     width: 70%;
     font-size: 3vw;
+  }
+
+  .slidel {
+    margin-right: 0;
+  }
+
+  .prev {
+    right: -5%;
+  }
+
+  .next {
+    right: -75%;
   }
 
   h4,
@@ -822,6 +910,10 @@ footer div {
 
 .dots7:hover {
   color: #2f4858;
+}
+
+#totop {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 834px) {
