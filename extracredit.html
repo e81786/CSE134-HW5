@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>EC Frameworks</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.30/vue.global.min.js"></script>
+    <style>
+        main {
+            margin: 4%;
+            margin-top: 3%;
+        }
+
+        button-count {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="home.html">return home</a>
+        <nav>
+            <a href="extracredit.html">ExtraCredit</a>
+            <a href="webcomponent.html">Webcomponent</a>
+            <a href="methodtest.html">Methodtesting</a>
+            <a href="home.html#About">About</a>
+            <a href="home.html#Work">Work</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Vue</h1>
+        <br />
+        <div id="app">
+            <button @click="count++">
+                Count is: {{ count }}
+            </button>
+        </div>
+    </main>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    count: 0,
+                };
+            },
+        }).mount("#app");
+    </script>
+</body>
+
+</html>

@@ -13,8 +13,14 @@ async function httpPost(e) {
 }
 
 async function httpGet(e) {
+  const http = document.getElementById("http");
+  const formData = new FormData(http);
+  const data = [...formData.entries()];
+  const asString = data
+    .map((x) => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
+    .join("&");
   const output = document.getElementById("response");
-  const request = await fetch("https://httpbin.org/get", {
+  const request = await fetch(`https://httpbin.org/get?${asString}`, {
     method: "GET",
   });
 
