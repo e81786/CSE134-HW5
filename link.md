@@ -9,3 +9,5 @@ https://ericdong-hw5.netlify.app/methodtest.html
 https://ericdong-hw5.netlify.app/webcomponent.html
 
 # Part 3: Extra Credit
+
+https://ericdong-hw5.netlify.app/extracredit.html
